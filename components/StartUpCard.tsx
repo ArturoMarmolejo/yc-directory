@@ -4,9 +4,9 @@ import {EyeIcon} from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import {Button} from "@/components/ui/button";
-import {Author, Startup} from "@/sanity/types";
+import {STARTUPS_QUERY_RESULT} from "@/sanity/types";
 
-export type StartupTypeCard = Omit<Startup, "author"> & { author?: Author }
+export type StartupTypeCard = STARTUPS_QUERY_RESULT[number]
 
 export const StartUpCard = ({post} : { post: StartupTypeCard }) => {
     const {_createdAt, views, author, title, category,  _id, image, description} = post
@@ -40,7 +40,8 @@ export const StartUpCard = ({post} : { post: StartupTypeCard }) => {
                 <p className="startup-card_desc">
                     {description}
                 </p>
-                <img src={image} alt="placeholder" className="startup-card_img"/>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={image ?? undefined} alt="placeholder" className="startup-card_img"/>
             </Link>
             <div className="flex-between gap-3 mt-5">
                 <Link href={`/?query=${category?.toLowerCase()}`}>
