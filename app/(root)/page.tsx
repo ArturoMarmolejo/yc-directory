@@ -1,5 +1,5 @@
 import {SearchForm} from "@/components/SearchForm";
-import {StartUpCard, StartupTypeCard} from "@/components/StartUpCard";
+import {StartUpCard} from "@/components/StartUpCard";
 import {STARTUPS_QUERY} from "@/sanity/lib/queries";
 import {sanityFetch} from "@/sanity/lib/live";
 
