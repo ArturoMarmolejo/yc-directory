@@ -20,6 +20,7 @@
     "@base-ui/react": "^1.8.0",
     "@sanity/image-url": "^2.1.1",
     "@sanity/vision": "^5.31.2",
+    "@uiw/react-md-editor": "^4.1.2",
     "class-variance-authority": "^0.7.1",
     "cn": "^0.4.0",
     "lucide-react": "^1.48.0",
@@ -33,7 +34,9 @@
     "sanity-plugin-markdown": "^9.0.14",
     "server-only": "^0.0.1",
     "shadcn": "^4.21.0",
-    "styled-components": "^6.5.3"
+    "slugify": "^1.6.9",
+    "styled-components": "^6.5.3",
+    "zod": "^4.6.6"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

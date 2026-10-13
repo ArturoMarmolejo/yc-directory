@@ -3,6 +3,7 @@ import {Geist, Geist_Mono, Work_Sans} from "next/font/google";
 import "./globals.css";
 import "easymde/dist/easymde.min.css"
 import {SanityLive} from "@/sanity/lib/live";
+import {Toaster} from "@/components/ui/toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col">
         {children}
+        <Toaster />
         <SanityLive />
       </body>
     </html>
